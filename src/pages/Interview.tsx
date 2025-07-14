@@ -14,7 +14,7 @@ const Interview = () => {
     },
     {
       title: "HR Round: Common Q&A",
-      url: "https://res.cloudinary.com/yourcloudname/raw/upload/v1/interview/hr-questions.pdf",
+      url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752499502/HR_Q_A_uvitrk.pdf",
     },
     {
       title: "Resume Building & Tips",
