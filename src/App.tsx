@@ -9,7 +9,8 @@ import Upload from './pages/Upload.jsx';
 import NotFound from './pages/NotFound.tsx';
 import About from './pages/About.tsx';
 import Home from './pages/Home.tsx';
-import Navbar from './components/Navbar.jsx';
+import Navbar from './components/Navbar.jsx'; 
+import Interview from './pages/Interview.tsx';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
         <Route path="/aptitude" element={<Aptitude />} />
         <Route path="/reasoning" element={<Reasoning />} />
         <Route path="/upload" element={<Upload />} />
+        <Route path="/interview" element={<Interview />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

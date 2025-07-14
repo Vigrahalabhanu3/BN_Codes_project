@@ -19,13 +19,13 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme');
-      return saved ? JSON.parse(saved) : false;
+      return saved === 'true'; // ✅ correctly handle saved boolean
     }
     return false;
   });
 
   useEffect(() => {
-    localStorage.setItem('theme', JSON.stringify(isDark));
+    localStorage.setItem('theme', isDark.toString()); // ✅ store as "true" or "false"
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {
@@ -34,7 +34,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    setIsDark((prev) => !prev);
   };
 
   return (
