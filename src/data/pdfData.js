@@ -7,7 +7,7 @@ let pythonPDFs = [
     category: "Fundamentals",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558623/Python_data_types_qd2nsd.pdf",
     size: "2.5 MB",
-    pages: 45,
+    pages: 4,
     uploadDate: "2024-01-15"
   },
   {
@@ -17,7 +17,7 @@ let pythonPDFs = [
     category: "Operators",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752559278/Python_Operators_vpxskc.pdf",
     size: "2.1 MB",
-    pages: 28,
+    pages: 3,
     uploadDate: "2024-01-14"
   },
   {
@@ -27,7 +27,7 @@ let pythonPDFs = [
     category: "Conditionals",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558683/python_conditional_Statements_rqvu8k.pdf",
     size: "1.7 MB",
-    pages: 22,
+    pages: 4,
     uploadDate: "2024-01-13"
   },
   {
@@ -37,7 +37,7 @@ let pythonPDFs = [
     category: "Loops",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558683/python_conditional_Statements_rqvu8k.pdf",
     size: "2.3 MB",
-    pages: 36,
+    pages: 4,
     uploadDate: "2024-01-12"
   },
   {
@@ -47,7 +47,7 @@ let pythonPDFs = [
     category: "Data Structures",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752559516/Python_Data_Structures_ph3tdm.pdf",
     size: "3.1 MB",
-    pages: 48,
+    pages: 7,
     uploadDate: "2024-01-11"
   },
   {
@@ -55,9 +55,9 @@ let pythonPDFs = [
     title: "Python Functions",
     description: "Understand defining functions, return values, default/keyword arguments, *args, **kwargs, and recursion.",
     category: "Functions",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_functions.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752560060/Python_Functions_sguqiq.pdf",
     size: "3.0 MB",
-    pages: 50,
+    pages: 7,
     uploadDate: "2024-01-10"
   },
   {
@@ -67,7 +67,7 @@ let pythonPDFs = [
     category: "Strings",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/String_Handling_in_Python_j05m9h.pdf",
     size: "2.6 MB",
-    pages: 40,
+    pages: 6,
     uploadDate: "2024-01-09"
   },
   {
@@ -77,7 +77,7 @@ let pythonPDFs = [
     category: "File Handling",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/File_Handling_in_Python_ilsdlm.pdf",
     size: "2.9 MB",
-    pages: 40,
+    pages: 6,
     uploadDate: "2024-01-08"
   },
   {
@@ -87,7 +87,7 @@ let pythonPDFs = [
     category: "Error Handling",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/Exception_Handling_in_Python_udwm6d.pdf",
     size: "1.8 MB",
-    pages: 30,
+    pages: 7,
     uploadDate: "2024-01-07"
   },
   {
@@ -97,7 +97,7 @@ let pythonPDFs = [
     category: "OOP",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752430066/Python_List_Comprehension_Telugu_30_Examples_vxhxqk.pdf",
     size: "3.2 MB",
-    pages: 62,
+    pages: 5,
     uploadDate: "2024-01-06"
   },
   {
@@ -107,7 +107,7 @@ let pythonPDFs = [
     category: "Functional",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558886/Lambda_Map_Filter_Reduce_in_Python_vdl1vn.pdf",
     size: "2.0 MB",
-    pages: 32,
+    pages: 7,
     uploadDate: "2024-01-05"
   },
   {
@@ -117,7 +117,7 @@ let pythonPDFs = [
     category: "Modules",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558884/Modules_and_Packages_in_Python_ymvfkv.pdf",
     size: "2.2 MB",
-    pages: 38,
+    pages: 6,
     uploadDate: "2024-01-04"
   },
   {
@@ -127,7 +127,7 @@ let pythonPDFs = [
     category: "Comprehensions",
     url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/Python_Comprehensions_xbd9d3.pdf",
     size: "2.4 MB",
-    pages: 34,
+    pages: 5,
     uploadDate: "2024-01-03"
   }
 ];
