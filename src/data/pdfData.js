@@ -5,7 +5,7 @@ let pythonPDFs = [
     title: "Python Basics and Fundamentals",
     description: "Learn the core concepts of Python programming including variables, data types, basic syntax, input/output, comments, and type conversion.",
     category: "Fundamentals",
-    url: "https://drive.google.com/file/d/1tIDObo_ynkibk5voSvYWtme-Oc7QCac_/view?usp=sharing",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558623/Python_data_types_qd2nsd.pdf",
     size: "2.5 MB",
     pages: 45,
     uploadDate: "2024-01-15"
@@ -15,7 +15,7 @@ let pythonPDFs = [
     title: "Python Operators",
     description: "Understand arithmetic, comparison, logical, assignment, and bitwise operators with practical examples.",
     category: "Operators",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_operators.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752559278/Python_Operators_vpxskc.pdf",
     size: "2.1 MB",
     pages: 28,
     uploadDate: "2024-01-14"
@@ -25,7 +25,7 @@ let pythonPDFs = [
     title: "Conditional Statements",
     description: "Master decision-making with if, elif, else, and nested conditions in Python.",
     category: "Conditionals",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_conditionals.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558683/python_conditional_Statements_rqvu8k.pdf",
     size: "1.7 MB",
     pages: 22,
     uploadDate: "2024-01-13"
@@ -35,7 +35,7 @@ let pythonPDFs = [
     title: "Loops in Python",
     description: "Explore for, while loops, range(), break, continue, and pass statements.",
     category: "Loops",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_loops.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558683/python_conditional_Statements_rqvu8k.pdf",
     size: "2.3 MB",
     pages: 36,
     uploadDate: "2024-01-12"
@@ -45,7 +45,7 @@ let pythonPDFs = [
     title: "Python Data Structures",
     description: "Detailed guide to lists, tuples, sets, and dictionaries with operations and methods.",
     category: "Data Structures",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_data_structures.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752559516/Python_Data_Structures_ph3tdm.pdf",
     size: "3.1 MB",
     pages: 48,
     uploadDate: "2024-01-11"
@@ -65,7 +65,7 @@ let pythonPDFs = [
     title: "String Handling in Python",
     description: "Master string methods, slicing, formatting (f-strings, format()), and manipulations.",
     category: "Strings",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_strings.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/String_Handling_in_Python_j05m9h.pdf",
     size: "2.6 MB",
     pages: 40,
     uploadDate: "2024-01-09"
@@ -75,7 +75,7 @@ let pythonPDFs = [
     title: "File Handling in Python",
     description: "Read, write, and manage files using open(), with, and handling text and CSV formats.",
     category: "File Handling",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_file_handling.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/File_Handling_in_Python_ilsdlm.pdf",
     size: "2.9 MB",
     pages: 40,
     uploadDate: "2024-01-08"
@@ -85,7 +85,7 @@ let pythonPDFs = [
     title: "Exception Handling in Python",
     description: "Use try, except, else, finally, and raise custom exceptions effectively.",
     category: "Error Handling",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/exception_handling.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/Exception_Handling_in_Python_udwm6d.pdf",
     size: "1.8 MB",
     pages: 30,
     uploadDate: "2024-01-07"
@@ -105,7 +105,7 @@ let pythonPDFs = [
     title: "Lambda, Map, Filter, Reduce",
     description: "Use anonymous functions and apply map, filter, and reduce for functional programming.",
     category: "Functional",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/lambda_map_filter_reduce.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558886/Lambda_Map_Filter_Reduce_in_Python_vdl1vn.pdf",
     size: "2.0 MB",
     pages: 32,
     uploadDate: "2024-01-05"
@@ -115,7 +115,7 @@ let pythonPDFs = [
     title: "Modules and Packages in Python",
     description: "Import, create, and manage modules and packages. Use pip for installing external libraries.",
     category: "Modules",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/modules_and_packages.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558884/Modules_and_Packages_in_Python_ymvfkv.pdf",
     size: "2.2 MB",
     pages: 38,
     uploadDate: "2024-01-04"
@@ -125,7 +125,7 @@ let pythonPDFs = [
     title: "List and Dictionary Comprehensions",
     description: "Master concise and readable Python comprehensions for lists, sets, and dictionaries.",
     category: "Comprehensions",
-    url: "https://res.cloudinary.com/demo/raw/upload/v1234567890/python_comprehensions.pdf",
+    url: "https://res.cloudinary.com/dzu7g2yts/image/upload/v1752558885/Python_Comprehensions_xbd9d3.pdf",
     size: "2.4 MB",
     pages: 34,
     uploadDate: "2024-01-03"

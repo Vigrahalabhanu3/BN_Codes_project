@@ -92,7 +92,7 @@ const Python = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-8 text-white"
+          className="mt-12 bg-gradient-to-r from-green-500 to-purple-600 rounded-lg shadow-lg p-8 text-white"
         >
           <h3 className="text-2xl font-bold mb-4">Recommended Learning Path</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
