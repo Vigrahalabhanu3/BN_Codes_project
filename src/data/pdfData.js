@@ -380,6 +380,13 @@ let reasoningPDFs = [
   }
 ];
 
+/**
+ * @typedef {Object} PDF
+ * @property {string} title
+ * @property {string} url
+ * @property {string} [category]
+ * @property {number} [pages]
+ */
 // Event listeners for real-time updates
 const updateListeners = {
   python: [],

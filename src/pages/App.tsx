@@ -1,0 +1,1 @@
+import Upload from './pages/Upload.jsx'; 

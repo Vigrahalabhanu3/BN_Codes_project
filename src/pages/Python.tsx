@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+/// <reference types="vite/client" />
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Code, BookOpen } from 'lucide-react';
 import { getPDFsByCategory, addUpdateListener, removeUpdateListener } from '../data/pdfData';
 import PDFList from '../components/PDFList.jsx';
 
 const Python = () => {
-  const [pdfs, setPdfs] = useState([]);
+  const [pdfs, setPdfs] = useState<{ pages: number; category: string; [key: string]: any }[]>([]);
 
   useEffect(() => {
     // Load initial PDFs

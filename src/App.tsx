@@ -5,12 +5,14 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Python from './pages/Python.tsx';
 import Aptitude from './pages/Aptitude.tsx';
 import Reasoning from './pages/Reasoning.tsx';
+// @ts-ignore
 import Upload from './pages/Upload.jsx';
 import NotFound from './pages/NotFound.tsx';
 import About from './pages/About.tsx';
 import Home from './pages/Home.tsx';
 import Navbar from './components/Navbar.jsx'; 
 import Interview from './pages/Interview.tsx';
+import Contact from './pages/Contact';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,6 +27,7 @@ function AnimatedRoutes() {
         <Route path="/upload" element={<Upload />} />
         <Route path="/interview" element={<Interview />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

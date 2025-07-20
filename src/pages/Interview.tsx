@@ -1,7 +1,5 @@
 // src/pages/Interview.tsx
 
-import React from 'react';
-
 const Interview = () => {
   const pdfData = [
     {

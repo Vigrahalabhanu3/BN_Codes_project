@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, BookOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
@@ -7,6 +7,7 @@ import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -15,7 +16,8 @@ const Navbar = () => {
     { name: 'Reasoning', path: '/reasoning' },
     { name: 'Upload', path: '/upload' },
     { name: 'Interview', path: '/interview' },
-    { name: 'About', path: '/about' }
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;

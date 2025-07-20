@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Brain, Calculator, Upload, ArrowRight } from 'lucide-react';
+import { Code, Brain, Calculator, Upload, ArrowRight } from 'lucide-react';
+import { easeInOut, spring } from 'framer-motion';
 
 // Animation Variants
 const containerVariants = {
@@ -8,7 +9,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' }
+    transition: { duration: 0.6, ease: easeInOut }
   },
   exit: { opacity: 0, scale: 0.95 }
 };
@@ -24,7 +25,7 @@ const staggerContainer = {
 
 const cardVariants = {
   hidden: { y: 30, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 60 } }
+  visible: { y: 0, opacity: 1, transition: { type: spring, stiffness: 60 } }
 };
 
 const iconVariants = {
@@ -143,7 +144,7 @@ const Home = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.div
                 key={feature.title}
                 variants={cardVariants}

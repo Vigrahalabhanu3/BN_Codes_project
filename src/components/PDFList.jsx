@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Download, Calendar, FileIcon, Search } from 'lucide-react';
 
+/**
+ * @param {{ pdfs: Array<{ title: string, url: string, category?: string, pages?: number }> }} props
+ */
 const PDFList = ({ pdfs, title, category, onPDFsUpdate }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');

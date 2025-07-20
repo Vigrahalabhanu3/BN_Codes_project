@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+/// <reference types="vite/client" />
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator, TrendingUp, BookOpen } from 'lucide-react';
+// @ts-ignore
 import { getPDFsByCategory, addUpdateListener, removeUpdateListener } from '../data/pdfData';
+// @ts-ignore
 import PDFList from '../components/PDFList';
 
 const Aptitude = () => {
-  const [pdfs, setPdfs] = useState([]);
+  const [pdfs, setPdfs] = useState<{ pages: number; category: string; [key: string]: any }[]>([]);
 
   useEffect(() => {
     // Load initial PDFs
