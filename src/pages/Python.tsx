@@ -3,23 +3,22 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Code, BookOpen } from 'lucide-react';
 import { getPDFsByCategory, addUpdateListener, removeUpdateListener } from '../data/pdfData';
-import PDFList from '../components/PDFList.jsx';
+import PDFList, { PDF } from '../components/PDFList';
 
 const Python = () => {
-  const [pdfs, setPdfs] = useState<{ pages: number; category: string; [key: string]: any }[]>([]);
+  const [pdfs, setPdfs] = useState<PDF[]>([]);
 
   useEffect(() => {
-    // Load initial PDFs
-    setPdfs(getPDFsByCategory('python'));
+    const initialPDFs = getPDFsByCategory('python').map(pdf => ({ ...pdf, id: String(pdf.id) }));
+    setPdfs(initialPDFs);
 
-    // Add listener for real-time updates
     const updatePDFs = () => {
-      setPdfs(getPDFsByCategory('python'));
+      const updatedPDFs = getPDFsByCategory('python').map(pdf => ({ ...pdf, id: String(pdf.id) }));
+      setPdfs(updatedPDFs);
     };
 
     addUpdateListener('python', updatePDFs);
 
-    // Cleanup listener on unmount
     return () => {
       removeUpdateListener('python', updatePDFs);
     };
@@ -68,7 +67,7 @@ const Python = () => {
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">
             <Code className="h-8 w-8 text-green-600 dark:text-green-400 mx-auto mb-3" />
             <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-              {pdfs.reduce((total, pdf) => total + pdf.pages, 0)}
+              {pdfs.reduce((total, pdf) => total + (pdf.pages ?? 0), 0)}
             </div>
             <div className="text-gray-600 dark:text-gray-400">Total Pages</div>
           </div>

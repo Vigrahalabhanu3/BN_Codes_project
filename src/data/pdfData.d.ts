@@ -1,7 +1,7 @@
 // TypeScript declaration file for pdfData.js
 
 export interface PDF {
-  id: number;
+  id: string;
   title: string;
   description: string;
   category: string;

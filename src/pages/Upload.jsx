@@ -1,19 +1,45 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Upload as UploadIcon, Lock, FileText, CheckCircle, AlertCircle, Code, Calculator, Brain } from 'lucide-react';
+import { Upload as UploadIcon, Lock, FileText, CheckCircle, AlertCircle, Code, Calculator, Brain, LucideIcon } from 'lucide-react';
 import { addPDFToCategory } from '../data/pdfData';
 
-const Upload = () => {
+// Replacing TypeScript interface with JSDoc for JS compatibility
+/**
+ * @typedef {Object} FormData
+ * @property {string} title
+ * @property {string} description
+ * @property {string} category
+ * @property {string} targetPage
+ */
+
+/**
+ * @typedef {Object} UploadStatus
+ * @property {'success' | 'error' | 'info'} type
+ * @property {string} message
+ */
+
+/**
+ * @typedef {Object} PageOption
+ * @property {'python' | 'aptitude' | 'reasoning'} value
+ * @property {string} label
+ * @property {LucideIcon} icon
+ * @property {'blue' | 'green' | 'purple'} color
+ * @property {string} description
+ */
+  icon: LucideIcon;
+  // Removed TypeScript type annotations and interface closing bracket for JS compatibility
+
+function Upload() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [formData, setFormData] = useState({
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [formData, setFormData] = useState<FormData>({
     title: '',
     description: '',
     category: '',
     targetPage: ''
   });
-  const [uploadStatus, setUploadStatus] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState<UploadStatus | null>(null);
   const [isUploading, setIsUploading] = useState(false);
 
   const handleAuth = (e) => {
@@ -27,12 +53,11 @@ const Upload = () => {
   };
 
   const handleFileSelect = (e) => {
-    const file = e.target.files[0];
+    const file = e.target.files && e.target.files[0];
     if (file && file.type === 'application/pdf') {
       setSelectedFile(file);
       setUploadStatus(null);
       
-      // Auto-fill title from filename if empty
       if (!formData.title) {
         const fileName = file.name.replace('.pdf', '').replace(/[_-]/g, ' ');
         setFormData(prev => ({
@@ -42,7 +67,7 @@ const Upload = () => {
       }
     } else {
       setUploadStatus({ type: 'error', message: 'Please select a PDF file only.' });
-      e.target.value = '';
+      if(e.target) e.target.value = '';
     }
   };
 
@@ -56,9 +81,7 @@ const Upload = () => {
 
   const simulateFileUpload = (file) => {
     return new Promise((resolve) => {
-      // Simulate upload delay
       setTimeout(() => {
-        // Generate a realistic Cloudinary URL
         const timestamp = Date.now();
         const fileName = file.name.replace(/\s+/g, '_').toLowerCase().replace('.pdf', '');
         const simulatedURL = `https://res.cloudinary.com/demo/raw/upload/v${timestamp}/${fileName}.pdf`;
@@ -79,7 +102,6 @@ const Upload = () => {
     setUploadStatus({ type: 'info', message: 'Uploading PDF... Please wait.' });
 
     try {
-      // Simulate file upload to Cloudinary
       const uploadedURL = await simulateFileUpload(selectedFile);
       
       const pdfData = {
@@ -88,10 +110,10 @@ const Upload = () => {
         category: formData.category || 'General',
         url: uploadedURL,
         size: `${(selectedFile.size / 1024 / 1024).toFixed(1)} MB`,
-        pages: Math.floor(Math.random() * 50) + 20 // Simulated page count
+        pages: Math.floor(Math.random() * 50) + 20
       };
 
-      // Add PDF to the selected category
+      // Remove TypeScript type assertion for JS compatibility
       const newPDF = addPDFToCategory(formData.targetPage, pdfData);
       
       if (newPDF) {
@@ -100,7 +122,6 @@ const Upload = () => {
           message: `✅ PDF "${formData.title}" has been successfully uploaded to the ${formData.targetPage.charAt(0).toUpperCase() + formData.targetPage.slice(1)} page! You can now view it in the ${formData.targetPage} section.` 
         });
         
-        // Reset form
         setSelectedFile(null);
         setFormData({
           title: '',
@@ -108,9 +129,10 @@ const Upload = () => {
           category: '',
           targetPage: ''
         });
-        
-        // Reset file input
-        document.getElementById('fileInput').value = '';
+
+        // Fix: Remove TypeScript type assertion for JS compatibility
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput && fileInput.value !== undefined) fileInput.value = '';
       } else {
         throw new Error('Failed to add PDF to category');
       }
@@ -392,7 +414,7 @@ const Upload = () => {
                 name="description"
                 value={formData.description}
                 onChange={handleInputChange}
-                rows="4"
+                rows={4}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 placeholder="Enter PDF description"
                 required

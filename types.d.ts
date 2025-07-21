@@ -1,0 +1,1 @@
+// This file is now located at src/types.d.ts 

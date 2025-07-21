@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { motion } from 'framer-motion';
 
-const containerVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.6 }
-  },
-  exit: { opacity: 0, scale: 0.95 }
-};
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });

@@ -10,11 +10,6 @@ const skills = [
   "Tailwind",
 ];
 
-const pageVariants = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  exit: { opacity: 0, y: -30, transition: { duration: 0.3 } },
-};
 
 const About: React.FC = () => {
   return (
@@ -49,7 +44,7 @@ const About: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        I'm currently pursuing my studies in <strong>Kakinada </strong>. I’m
+        I'm currently pursuing my studies in <strong>KIET College</strong>.Fellow at <strong>NXTWAVE</strong> I’m
         passionate about <strong>coding</strong>, <strong>logical thinking</strong>, and helping
         others learn in a clear and simple way.
       </motion.p>

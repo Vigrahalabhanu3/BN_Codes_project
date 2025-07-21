@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BookOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+interface NavItem {
+  name: string;
+  path: string;
+}
 
-  const navItems = [
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const location = useLocation();
+  
+  const navItems: NavItem[] = [
     { name: 'Home', path: '/' },
+    { name: 'Dashboard', path: '/dashboard' },
+    { name: 'Profile', path: '/profile' },
     { name: 'Python', path: '/python' },
     { name: 'Aptitude', path: '/aptitude' },
     { name: 'Reasoning', path: '/reasoning' },
@@ -20,8 +26,8 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isActive = (path) => location.pathname === path;
-
+  const isActive = (path: string): boolean => location.pathname === path;
+  
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +41,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -97,4 +103,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

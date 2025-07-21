@@ -1,19 +1,23 @@
 
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { ProgressProvider } from './contexts/ProgressContext';
+import { UserProvider } from './contexts/UserContext';
 // Lazy load all pages
 const Python = lazy(() => import('./pages/Python.tsx'));
 const Aptitude = lazy(() => import('./pages/Aptitude.tsx'));
 const Reasoning = lazy(() => import('./pages/Reasoning.tsx'));
-const Upload = lazy(() => import('./pages/Upload.jsx'));
+const Upload = lazy(() => import('./pages/Upload.tsx'));
 const NotFound = lazy(() => import('./pages/NotFound.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Home = lazy(() => import('./pages/Home.tsx'));
 const Interview = lazy(() => import('./pages/Interview.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
-import Navbar from './components/Navbar.jsx'; 
+const Dashboard = lazy(() => import('./pages/Dashboard.tsx'));
+const UserProfile = lazy(() => import('./pages/UserProfile.tsx'));
+import Navbar from './components/Navbar';
 import Spinner from './components/Spinner';
 
 function AnimatedRoutes() {
@@ -30,6 +34,8 @@ function AnimatedRoutes() {
         <Route path="/interview" element={<Interview />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
@@ -38,16 +44,20 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-          <Navbar />
-          <Suspense fallback={<Spinner />}>
-            <AnimatedRoutes />
-          </Suspense>
-        </div>
-      </Router>
-    </ThemeProvider>
+    <UserProvider>
+      <ProgressProvider>
+        <ThemeProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+              <Navbar />
+              <Suspense fallback={<Spinner />}>
+                <AnimatedRoutes />
+              </Suspense>
+            </div>
+          </Router>
+        </ThemeProvider>
+      </ProgressProvider>
+    </UserProvider>
   );
 }
 
