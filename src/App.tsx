@@ -1,18 +1,20 @@
 
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext';
-import Python from './pages/Python.tsx';
-import Aptitude from './pages/Aptitude.tsx';
-import Reasoning from './pages/Reasoning.tsx';
-// @ts-ignore
-import Upload from './pages/Upload.jsx';
-import NotFound from './pages/NotFound.tsx';
-import About from './pages/About.tsx';
-import Home from './pages/Home.tsx';
+// Lazy load all pages
+const Python = lazy(() => import('./pages/Python.tsx'));
+const Aptitude = lazy(() => import('./pages/Aptitude.tsx'));
+const Reasoning = lazy(() => import('./pages/Reasoning.tsx'));
+const Upload = lazy(() => import('./pages/Upload.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Home = lazy(() => import('./pages/Home.tsx'));
+const Interview = lazy(() => import('./pages/Interview.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
 import Navbar from './components/Navbar.jsx'; 
-import Interview from './pages/Interview.tsx';
-import Contact from './pages/Contact';
+import Spinner from './components/Spinner';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -40,7 +42,9 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
           <Navbar />
-          <AnimatedRoutes />
+          <Suspense fallback={<Spinner />}>
+            <AnimatedRoutes />
+          </Suspense>
         </div>
       </Router>
     </ThemeProvider>

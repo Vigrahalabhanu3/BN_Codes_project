@@ -5,9 +5,10 @@ import { Home, ArrowLeft, Search } from 'lucide-react';
 const NotFound = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.5 }}
       className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center py-8"
     >
       <div className="max-w-md w-full mx-4 text-center">

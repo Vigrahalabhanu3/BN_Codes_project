@@ -382,10 +382,18 @@ let reasoningPDFs = [
 
 /**
  * @typedef {Object} PDF
+ * @property {number} id
  * @property {string} title
+ * @property {string} description
+ * @property {string} category
  * @property {string} url
- * @property {string} [category]
- * @property {number} [pages]
+ * @property {string} size
+ * @property {number} pages
+ * @property {string} uploadDate
+ */
+/**
+ * @callback UpdateListener
+ * @returns {void}
  */
 // Event listeners for real-time updates
 const updateListeners = {

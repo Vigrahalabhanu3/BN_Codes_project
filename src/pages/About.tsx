@@ -10,9 +10,21 @@ const skills = [
   "Tailwind",
 ];
 
+const pageVariants = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  exit: { opacity: 0, y: -30, transition: { duration: 0.3 } },
+};
+
 const About: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-4xl mx-auto px-6 py-12 text-center"
+    >
      <motion.img
   src="https://res.cloudinary.com/dzu7g2yts/image/upload/v1752486998/IMG-20250420-WA0088_cjndtx.jpg"
   alt="Profile"
@@ -21,7 +33,6 @@ const About: React.FC = () => {
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
 />
-
 
       <motion.h1
         className="text-4xl font-bold mb-4 text-blue-800"
@@ -68,7 +79,7 @@ const About: React.FC = () => {
         Whether you're preparing for competitive exams or placement drives, you'll find curated
         content, downloadable PDFs, and practical resources to guide your learning journey.
       </motion.p>
-    </div>
+    </motion.div>
   );
 };
 

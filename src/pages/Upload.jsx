@@ -150,9 +150,10 @@ const Upload = () => {
   if (!isAuthenticated) {
     return (
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{ duration: 0.5 }}
         className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center py-8"
       >
         <div className="max-w-md w-full mx-4">
@@ -213,9 +214,10 @@ const Upload = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.5 }}
       className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
